@@ -11,16 +11,10 @@ jobs:
     if: github.ref != 'refs/heads/main'
     uses: tata-actions/workflows/.github/workflows/dummy-feature-frontend.yml@main
     with:
-      project: roboshop
+      project: expense
       component: frontend
       environment: dev
     secrets: inherit  
 
-  dev-pipeline:
-    if: github.ref == 'refs/heads/main'
-    uses: tata-actions/workflows/.github/workflows/dev-dummy-frontend.yaml@main
-    with:
-      project: roboshop
-      component: frontend
-      environment: dev
-    secrets: inherit   
+  
+    
